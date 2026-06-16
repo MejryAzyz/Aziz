@@ -82,8 +82,8 @@ function Terminal() {
       if (li >= script.length) return
       const line = script[li]
       if (line.prompt) {
-        if (ci <= line.text.length) {
-          setTyped(line.text.slice(0, ci))
+       if (ci <= (line.text?.length ?? 0)) {
+  setTyped(line.text?.slice(0, ci) ?? "")
           ci++
           setTimeout(run, 38)
         } else {
