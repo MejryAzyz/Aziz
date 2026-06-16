@@ -632,7 +632,6 @@ export function CloudProjects() {
               </div>
               <StatusBadge status={p.status} />
             </div>
-            <div className="mt-1 font-mono text-xs text-muted-foreground">{p.region}</div>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
 
             {(p.name === "CloudAura" || p.name === "YallaTN" || p.name === "TRIPIFLY" || p.name === "FoodLik") && (
