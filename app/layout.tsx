@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   description:
     'Portfolio of Aziz, a cloud engineer designing resilient, scalable infrastructure on AWS, Azure, and Kubernetes.',
   generator: 'v0.app',
+   icons: {
+    icon: '/favicon (1).png',        // browser tab
+    apple: '/favicon (1).png',    // iOS home screen
+  },
 }
 
 export const viewport: Viewport = {
