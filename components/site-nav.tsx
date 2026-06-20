@@ -1,7 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { Sparkles } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { TOUR_OPEN_EVENT } from "@/lib/tour-slides"
 
 const LINKS = [
   { label: "About", href: "#about" },
@@ -42,6 +44,16 @@ export function SiteNav() {
         </a>
 
         <ul className="hidden items-center gap-1 text-[13px] font-medium text-muted-foreground md:flex">
+          <li>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent(TOUR_OPEN_EVENT))}
+              className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 transition-colors hover:bg-secondary hover:text-foreground"
+            >
+              <Sparkles className="size-3.5 text-primary" />
+              Your guide
+            </button>
+          </li>
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -55,6 +67,14 @@ export function SiteNav() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent(TOUR_OPEN_EVENT))}
+            className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-2 text-[13px] font-semibold text-primary transition-colors hover:bg-primary/15 md:hidden"
+          >
+            <Sparkles className="size-3.5" />
+            Your guide
+          </button>
           <a
             href="#contact"
             className="hidden rounded-full bg-primary px-4 py-2 text-[13px] font-semibold text-primary-foreground transition-transform hover:scale-105 sm:inline-flex"

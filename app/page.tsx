@@ -10,12 +10,12 @@ import { CommandCenter } from "@/components/command-center"
 import { Contact } from "@/components/contact"
 import { TechStack } from "@/components/tech-stack"
 import { CloudProjects } from "@/components/project"
-
-
+import { DeploymentTour } from "@/components/deployment-tour"
 
 export default function Page() {
   return (
     <main className="relative min-h-screen bg-background text-foreground">
+      <DeploymentTour />
       {/* grain texture overlay */}
       <div
         aria-hidden="true"
