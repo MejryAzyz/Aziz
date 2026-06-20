@@ -34,7 +34,7 @@ const script: Line[] = [
         <JsonLine>
           <span className="text-sky-300">  "hometown"</span>
           <span className="text-slate-300">: </span>
-          <span className="text-pink-300">"Ben Arous, Tunisia"</span>
+          <span className="text-pink-300">"Tunis, Tunisia"</span>
           <span className="text-slate-400">,</span>
         </JsonLine>
         <JsonLine>
